@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Stock Tracker</title>
+    <link rel="stylesheet" type="text/css" href="./site.css">
+</head>
+
+<body>
+    <div class="card description">
+            &#9745; Stock Tracker - Track stock price for a given ticker symbol over time.
+    </div>
+    <div class="card">
+        <div><label>Ticker Input: </label>
+            <input type='text' id="ticker" class="input" value="IBM" />
+            <button type='submit' id="ticker" class="input" onclick="getLatestData()">Submit</button>
+        </div>
+        <div>Last Traded : &nbsp;<span id="stockLast"></span></div>
+        <div>Open : &nbsp;<span id="stockOpen"></span></div>
+        <div>Low : &nbsp;<span id="stockLow"></span></div>
+        <div>High : &nbsp;<span id="stockHigh"></span></div>
+        <div>Closing Price  : &nbsp;<span id="stockClose"></span></div>
+        <div>Volume Traded  : &nbsp;<span id="stockVolume"></span></div>
+    </div>
+    <div class="card" id="lineChart">
+        <canvas id="canvas">
+        </canvas>
+    </div>
+    <div id="tooltip"></div>
+    <script type="text/javascript" src="./stock-tracker.js"></script>
+</body>
+
+</html>

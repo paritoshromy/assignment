@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image-Mapper</title>
+    <link rel="stylesheet" type="text/css"  href="./site.css">
+</head>
+<body>
+    <div id="popupForm">
+        <label>Description</label>
+        <div>
+            <input type="text" placeholder="Describe the point" name="pointDescription" id="description">
+            <span id="errorMessage">Required Input</span>
+        </div>
+        <button type="submit" class="button" onclick="submitForm()">Submit</button>
+        <button type="button" class="button cancel" onclick="closeForm()">Close</button>
+    </div>
+    <div class="card description">&#9745; Image Mapper - Upload an image and then add tags/description to the image.</div>
+    <div class="card upload-details">
+        <div class="card-left">
+            <input type='file' id="fileUpload" class="button" />
+            <img id="uploadedImage" src="#" alt="Uploaded Image">
+        </div>
+        <div class="card-right" id="details">
+            <p>&#10004; Image Name : &nbsp;<span id="imageName"></span></p>
+            <p>&#10004; Dimensions  :  &nbsp;<span id="dimension"></span></p>
+            <p>&#10004; MIME Type   :  &nbsp;<span id="mimeType"></span></p>
+        </div>
+    </div>
+    <div class="card" id="tagImage">
+        <div class="card-left" id="canvasBox">
+            <canvas id="uploadCanvas">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div>
+        <div class="card-right" id="tagsBox">
+            <table id="imageTags">
+                <thead>
+                    <tr class="headerRow">
+                        <th style="width: 10%;">X</th>
+                        <th style="width: 10%;">Y</th>
+                        <th style="width: 80%;">Description</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div id="tooltip"></div>
+    <script  type="text/javascript" src="./image-mapper.js"></script>
+</body>
+</html>
